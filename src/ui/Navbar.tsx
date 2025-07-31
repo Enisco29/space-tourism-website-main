@@ -21,7 +21,6 @@ const navItems: NavItem[] = [
 ];
 
 const Navbar = () => {
-  const [activeNav, setActiveNav] = useState<string>("HOME");
 
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -53,23 +52,21 @@ const Navbar = () => {
               <NavLink
                 key={item.id}
                 to={item.href}
-                className={({ isActive }: { isActive: boolean }) =>
-                  `relative ${
-                    isActive
-                      ? "text-white"
-                      : "text-space-text/70 hover:text-white"
-                  }`
-                }
-                onClick={() => setActiveNav(item.label)}
-              >
-                <div className="flex items-center">
-                  <span className="font-bold mr-2">{item.id}</span>
-                  <span className="uppercase font-thin">{item.label}</span>
-                </div>
-
-                {isActive(item.href) && (
-                  <div className="absolute -bottom-6 left-0 right-0 h-0.5 bg-white"></div>
-                )}
+                  className={({ isActive }: { isActive: boolean }) =>
+                    `relative ${
+                      isActive
+                        ? "text-white"
+                        : "text-space-text/70 hover:text-white"
+                    }`
+                  }
+                >
+                  <div className="flex items-center">
+                    <span className="font-bold mr-2">{item.id}</span>
+                    <span className="uppercase font-thin">{item.label}</span>
+                  </div>
+                  {isActive(item.href) && (
+                    <div className="absolute -bottom-6 left-0 right-0 h-0.5 bg-white"></div>
+                  )}
               </NavLink>
             ))}
           </div>
