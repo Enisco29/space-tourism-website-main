@@ -22,9 +22,9 @@ const Hero = () => {
         </div>
 
         {/* Right side - Explore button */}
-        <div className=" flex justify-end items-center">
-          <button className="w-[200px] h-[200px] bg-white rounded-full flex items-center justify-center text-black text-xl font-medium tracking-wider hover:bg-white/90 transition-colors duration-300">
-            EXPLORE
+        <div className="flex justify-end items-center">
+          <button className="relative w-[200px] h-[200px] bg-white rounded-full flex items-center justify-center text-black text-xl font-medium tracking-wider transition duration-300 hover:scale-105 before:content-[''] before:absolute before:rounded-full before:w-[300px] before:h-[300px] before:bg-white/10 before:transition-transform before:duration-300 before:scale-0 hover:before:scale-100 z-10 overflow-hidden">
+            <span className="relative z-20">EXPLORE</span>
           </button>
         </div>
       </div>
