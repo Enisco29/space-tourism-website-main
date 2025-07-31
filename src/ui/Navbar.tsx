@@ -32,7 +32,7 @@ const Navbar = () => {
     <nav className="fixed flex justify-between items-center lg:top-3 left-0 right-0 z-20 ">
       {/* Logo */}
       <div>
-        <img src={Logo} alt="logo" className="w-10 h-10 ml-9" />
+        <img src={Logo} alt="logo" className="w-10 h-10 ml-9 max-sm:ml-5" />
       </div>
 
         <img src={line} alt="line" className="absolute left-[120px] z-50 lg:block hidden" />
@@ -65,7 +65,7 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <button 
-            className="sm:hidden max-sm:bg-none text-space-text"
+            className="sm:hidden max-sm:bg-none text-space-text max-sm:-mr-6"
             aria-label="Mobile menu toggle"
           ><img src={Menu} alt="" />
       
